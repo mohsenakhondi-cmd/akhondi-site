@@ -1,0 +1,93 @@
+
+<!doctype html>
+<html lang="de">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Dr. Mohsen Akhondi — CV</title>
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="container">
+    <div class="lang-switch">
+      <button data-lang="fa">فارسی</button>
+      <button data-lang="de" class="active">Deutsch</button>
+      <button data-lang="en">English</button>
+    </div>
+
+    <div class="header">
+      <img src="assets/photo.jpg" alt="Portrait of Dr. Mohsen Akhondi">
+      <div>
+        <h1 class="name" id="title">Dr. Mohsen Akhondi</h1>
+        <div class="subtitle" id="role">Facharzt für Anästhesiologie</div>
+        <div id="contact" class="section"></div>
+      </div>
+    </div>
+
+    <div id="about" class="section">
+      <h2>Über mich</h2>
+      <div class="card">
+        <p>Erfahrener Facharzt …</p>
+      </div>
+    </div>
+
+    <div id="resume" class="section">
+      <h2>Lebenslauf</h2>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Ausbildung / Education</h3>
+        <ul id="edu" class="timeline"></ul>
+      </div>
+      <div class="card">
+        <h3 style="margin:0 0 8px">Berufserfahrung / Experience</h3>
+        <ul id="exp" class="timeline"></ul>
+      </div>
+    </div>
+
+    <div id="certs" class="section">
+      <h2>Weiterbildungen & Zertifikate</h2>
+      <div class="card">
+        <ul class="timeline">
+          <li>2023: Berliner Regionalanästhesie Intensivkurs (BRAIN)</li>
+          <li>2023: Strahlenschutzkurs</li>
+          <li>2023: Perioperative Schmerztherapie</li>
+          <li>2023: Intensivmedizinische Komplexbehandlung</li>
+          <li>2023: Sonographie & Echokardiographie in der Intensivmedizin</li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="section">
+      <h2>Offizielle Dokumente</h2>
+      <div class="card">
+        <ul class="timeline">
+          <li>Approbation in Deutschland (28.04.2023)</li>
+          <li>Anerkennung als Facharzt für Anästhesiologie in Deutschland</li>
+          <li>Berechtigung zur Führung des iranischen Doktortitels in Deutschland</li>
+          <li>MBA in Strategy – Universität Teheran (2023)</li>
+        </ul>
+      </div>
+    </div>
+
+    <div id="skills" class="section">
+      <h2 id="skills-t">Kompetenzen</h2>
+      <div class="card">
+        <ul id="skills-list"></ul>
+      </div>
+    </div>
+
+    <div id="langs" class="section">
+      <h2>Sprachen</h2>
+      <div class="card">
+        <ul id="lang-list"></ul>
+      </div>
+    </div>
+
+    <div class="footer">
+      <div>© <span id="year"></span> Mohsen Akhondi</div>
+      <div><a href="mailto:Akhondi@Live.com">Kontakt per E‑Mail</a></div>
+    </div>
+  </div>
+<script src="script.js"></script>
+<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+</body>
+</html>
