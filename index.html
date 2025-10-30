@@ -5,48 +5,105 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Dr. Mohsen Akhondi — CV</title>
-<link rel="stylesheet" href="styles.css">
+<style>
+:root{--bg:#ffffff;--fg:#0f172a;--muted:#64748b;--line:#e2e8f0;--accent:#0ea5a6;--chip:#eef2ff}
+@media (prefers-color-scheme: dark){
+  :root{--bg:#0b1220;--fg:#e5eefc;--muted:#94a3b8;--line:#1f2a44;--chip:#1b2140}
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1040px;margin-inline:auto;padding:0 20px}
+.nav{position:sticky;top:0;z-index:10;background:rgba(255,255,255,.9);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+@media (prefers-color-scheme: dark){.nav{background:rgba(11,18,32,.75)}}
+.nav-inner{display:flex;align-items:center;gap:12px;justify-content:space-between;min-height:58px;flex-wrap:wrap}
+.brand{font-weight:700}
+.nav-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;flex:1}
+.lang-switch{display:flex;gap:8px}
+.lang-switch button{border:1px solid var(--line);background:transparent;border-radius:10px;padding:6px 10px;cursor:pointer;color:var(--fg)}
+.lang-switch button.active{background:var(--chip)}
+.hero{display:grid;grid-template-columns:minmax(90px,120px) 1fr;gap:18px;align-items:center;padding:20px 0 8px}
+.hero img{width:100%;height:auto;max-width:120px;aspect-ratio: 6 / 7;object-fit:cover;border-radius:12px;border:1px solid var(--line)}
+h1{font-size:clamp(22px,3.8vw,34px);margin:0}
+.sub{color:var(--muted);margin:6px 0 0}
+.section{padding:20px 0}
+.section h2{font-size:22px;margin:0 0 12px;color:#0b3c49}
+.card{border:1px solid var(--line);border-radius:14px;padding:16px;background:transparent}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media (max-width:880px){.grid-2{grid-template-columns:1fr}}
+ul.clean{margin:0;padding-left:18px}
+.meta{color:var(--muted);font-size:14px}
+.footer{border-top:1px solid var(--line);margin-top:24px;padding:16px 0;color:var(--muted);font-size:14px}
+[dir="rtl"] .hero{grid-template-columns:1fr minmax(90px,120px)}
+[dir="rtl"] .hero{direction:rtl}
+[dir="rtl"] .nav-links{flex-direction:row-reverse}
+@media print{.nav,.lang-switch{display:none} .card{page-break-inside:avoid}}
+</style>
 </head>
 <body>
-  <div class="container">
-    <div class="lang-switch">
-      <button data-lang="fa">فارسی</button>
-      <button data-lang="de" class="active">Deutsch</button>
-      <button data-lang="en">English</button>
+  <div class="nav">
+    <div class="container nav-inner">
+      <div class="brand">Dr. Mohsen Akhondi</div>
+      <nav class="nav-links">
+        <a href="#about" data-i="nav_about">Über mich</a>
+        <a href="#resume" data-i="nav_resume">Lebenslauf</a>
+        <a href="#certs" data-i="nav_certs">Zertifikate</a>
+        <a href="publications.html" data-i="nav_pubs">Publikationen</a>
+        <a href="#contact" data-i="nav_contact">Kontakt</a>
+      </nav>
+      <div class="lang-switch">
+        <button data-lang="fa">FA</button>
+        <button data-lang="de" class="active">DE</button>
+        <button data-lang="en">EN</button>
+      </div>
     </div>
+  </div>
 
-    <div class="header">
-      <img src="assets/photo.jpg" alt="Portrait of Dr. Mohsen Akhondi">
+  <main class="container">
+    <section class="hero">
+      <img src="assets/photo.jpg" alt="Portrait">
       <div>
-        <h1 class="name" id="title">Dr. Mohsen Akhondi</h1>
-        <div class="subtitle" id="role">Facharzt für Anästhesiologie</div>
-        <div id="contact" class="section"></div>
+        <h1 data-i="title">Dr. Mohsen Akhondi</h1>
+        <div class="sub" data-i="role">Facharzt Anästhesiologie • Kinderanästhesie • Intensivmedizin</div>
       </div>
-    </div>
+    </section>
 
-    <div id="about" class="section">
-      <h2>Über mich</h2>
+    <section id="about" class="section">
+      <h2 data-i="about_h">Über mich</h2>
       <div class="card">
-        <p>Erfahrener Facharzt …</p>
+        <p data-i="about_text">Erfahrener Facharzt …</p>
       </div>
-    </div>
+    </section>
 
-    <div id="resume" class="section">
-      <h2>Lebenslauf</h2>
-      <div class="card">
-        <h3 style="margin:0 0 8px">Ausbildung / Education</h3>
-        <ul id="edu" class="timeline"></ul>
+    <section id="resume" class="section">
+      <h2 data-i="resume_h">Lebenslauf</h2>
+      <div class="grid-2">
+        <div class="card">
+          <h3 data-i="edu_h" style="margin-top:0">Ausbildung</h3>
+          <ul class="clean">
+            <li>MD — Mashhad University of Medical Sciences, Iran</li>
+            <li>Anesthesiology Specialty Training — Mashhad, Iran</li>
+            <li>Pediatric Anesthesia Fellowship — Mashhad, Iran</li>
+            <li>MBA (Strategy) — University of Tehran</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3 data-i="exp_h" style="margin-top:0">Berufserfahrung</h3>
+          <ul class="clean">
+            <li>Anesthesiologist — Sana Klinikum Hof (Germany)</li>
+            <li>Anesthesia — Kreiskrankenhaus Torgau (Germany)</li>
+            <li>Anesthesia — Heart Center Leipzig (Germany)</li>
+            <li>Head of Anesthesia — Sajadeh & Taleghani Hospitals (Iran)</li>
+          </ul>
+        </div>
       </div>
-      <div class="card">
-        <h3 style="margin:0 0 8px">Berufserfahrung / Experience</h3>
-        <ul id="exp" class="timeline"></ul>
-      </div>
-    </div>
+    </section>
 
-    <div id="certs" class="section">
-      <h2>Weiterbildungen & Zertifikate</h2>
+    <section id="certs" class="section">
+      <h2 data-i="certs_h">Weiterbildungen & Zertifikate</h2>
       <div class="card">
-        <ul class="timeline">
+        <ul class="clean">
           <li>Berliner Regionalanästhesie Intensivkurs (BRAIN)</li>
           <li>Strahlenschutzkurs</li>
           <li>Perioperative Schmerztherapie</li>
@@ -54,40 +111,84 @@
           <li>Sonographie & Echokardiographie in der Intensivmedizin</li>
         </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="section">
-      <h2>Offizielle Dokumente</h2>
+    <section id="docs" class="section">
+      <h2 data-i="docs_h">Offizielle Dokumente</h2>
       <div class="card">
-        <ul class="timeline">
-          <li>Approbation in Deutschland </li>
-          <li>Anerkennung als Facharzt für Anästhesiologie in Deutschland</li>
-          <li>Berechtigung zur Führung des iranischen Doktortitels in Deutschland</li>
-          <li>MBA in Strategy – Universität Teheran (2023)</li>
+        <ul class="clean">
+          <li>Approbation (Deutschland)</li>
+          <li>Anerkennung als Facharzt für Anästhesiologie (Deutschland)</li>
+          <li>Berechtigung zur Führung des iranischen Doktortitels (Deutschland)</li>
+          <li>MBA in Strategy – Universität Teheran</li>
         </ul>
       </div>
-    </div>
+    </section>
 
-    <div id="skills" class="section">
-      <h2 id="skills-t">Kompetenzen</h2>
+    <section id="skills" class="section">
+      <h2 data-i="skills_h">Kompetenzen</h2>
       <div class="card">
-        <ul id="skills-list"></ul>
+        <ul id="skill-list" class="clean">
+          <li>Anästhesieverfahren in verschiedenen Disziplinen</li>
+          <li>Intensivmedizin inkl. postoperativer Überwachung</li>
+          <li>Mitarbeit im Notfallteam</li>
+          <li>Lehre für Assistenzärzte & Studierende</li>
+          <li>Schmerztherapie- & QM-Protokolle entwickeln</li>
+        </ul>
       </div>
-    </div>
+    </section>
 
-    <div id="langs" class="section">
-      <h2>Sprachen</h2>
+    <section id="langs" class="section">
+      <h2 data-i="langs_h">Sprachen</h2>
       <div class="card">
-        <ul id="lang-list"></ul>
+        <ul id="lang-list" class="clean">
+          <li>Deutsch: C1 (Medizin)</li>
+          <li>Englisch: Fließend</li>
+          <li>Persisch: Muttersprache</li>
+        </ul>
       </div>
-    </div>
+    </section>
 
-    <div class="footer">
-      <div>© <span id="year"></span> Mohsen Akhondi</div>
-      <div><a href="mailto:Akhondi@Live.com">Kontakt per E‑Mail</a></div>
-    </div>
-  </div>
-<script src="script.js"></script>
-<script>document.getElementById('year').textContent=new Date().getFullYear();</script>
+    <section id="contact" class="section">
+      <h2 data-i="contact_h">Kontakt</h2>
+      <div class="card">
+        <p><a href="mailto:Akhondi@Live.com" data-i="contact_btn">E-Mail senden</a></p>
+      </div>
+    </section>
+
+    <div class="footer">© <script>document.write(new Date().getFullYear())</script> Mohsen Akhondi</div>
+  </main>
+
+  <script>
+const dict = {
+  en:{nav_about:"About",nav_resume:"Resume",nav_certs:"Certificates",nav_pubs:"Publications",nav_contact:"Contact",
+      title:"Dr. Mohsen Akhondi",role:"Anesthesiologist • Pediatric Anesthesia • Intensive Care",
+      about_h:"About",about_text:"Experienced anesthesiologist specialized in pediatric anesthesia, intensive care and perioperative pain therapy.",
+      resume_h:"Resume",edu_h:"Education",exp_h:"Experience",certs_h:"Certificates",docs_h:"Official Documents",
+      skills_h:"Key Competencies",langs_h:"Languages",contact_h:"Contact",contact_btn:"Email me"},
+  de:{nav_about:"Über mich",nav_resume:"Lebenslauf",nav_certs:"Zertifikate",nav_pubs:"Publikationen",nav_contact:"Kontakt",
+      title:"Dr. Mohsen Akhondi",role:"Facharzt Anästhesiologie • Kinderanästhesie • Intensivmedizin",
+      about_h:"Über mich",about_text:"Erfahrener Facharzt mit Schwerpunkt Kinderanästhesie, Intensivmedizin und perioperative Schmerztherapie.",
+      resume_h:"Lebenslauf",edu_h:"Ausbildung",exp_h:"Berufserfahrung",certs_h:"Weiterbildungen & Zertifikate",docs_h:"Offizielle Dokumente",
+      skills_h:"Fachliche Kompetenzen",langs_h:"Sprachen",contact_h:"Kontakt",contact_btn:"E-Mail senden"},
+  fa:{nav_about:"درباره من",nav_resume:"رزومه",nav_certs:"گواهی‌ها",nav_pubs:"مقالات",nav_contact:"تماس",
+      title:"دکتر محسن آخوندی",role:"متخصص بیهوشی • بیهوشی کودکان • مراقبت‌های ویژه",
+      about_h:"درباره من",about_text:"متخصص بیهوشی با تمرکز بر بیهوشی اطفال، مراقبت‌های ویژه و درد پیرامون عمل.",
+      resume_h:"رزومه",edu_h:"تحصیلات",exp_h:"سوابق شغلی",certs_h:"دوره‌ها و گواهی‌نامه‌ها",docs_h:"اسناد رسمی",
+      skills_h:"شایستگی‌ها",langs_h:"زبان‌ها",contact_h:"تماس",contact_btn:"ایمیل"}
+};
+function setLang(lang){
+  document.documentElement.lang = lang;
+  document.documentElement.dir = (lang==='fa')?'rtl':'ltr';
+  const t = dict[lang];
+  document.querySelectorAll('[data-i]').forEach(el=>{ const k=el.getAttribute('data-i'); if(t[k]) el.textContent=t[k]; });
+  document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));
+  document.querySelector(`.lang-switch button[data-lang="${lang}"]`).classList.add('active');
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  setLang('de');
+  document.querySelectorAll('.lang-switch button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+});
+</script>
 </body>
 </html>
