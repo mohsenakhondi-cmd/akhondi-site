@@ -1,0 +1,115 @@
+
+<!doctype html><html lang="de"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Dr. Mohsen Akhondi, MBA — CV</title><style>
+:root{--bg:#ffffff;--fg:#0f172a;--muted:#64748b;--line:#e2e8f0;--accent:#0ea5a6;--chip:#eef2ff}
+html,body{margin:0;padding:0;background:var(--bg);color:var(--fg);font:16px/1.65 system-ui,-apple-system,Segoe UI,Roboto,Helvetica,Arial}
+a{color:var(--accent);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:1040px;margin:auto;padding:0 20px}
+.nav{position:sticky;top:0;background:rgba(255,255,255,.9);border-bottom:1px solid var(--line);backdrop-filter:blur(8px);z-index:10}
+.nav-inner{display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:10px;min-height:56px}
+.brand{font-weight:700}
+.nav-links{display:flex;gap:14px;flex-wrap:wrap;justify-content:center;flex:1}
+.lang-switch{display:flex;gap:6px}
+.lang-switch button{border:1px solid var(--line);background:transparent;border-radius:8px;padding:5px 9px;cursor:pointer}
+.hero{display:grid;grid-template-columns:minmax(90px,120px) 1fr;gap:18px;align-items:center;padding:22px 0}
+.hero img{width:100%;max-width:120px;border-radius:12px;border:1px solid var(--line)}
+h1{margin:0;font-size:clamp(22px,3.5vw,34px)}
+.sub{color:var(--muted)}
+.section{padding:20px 0}
+.card{border:1px solid var(--line);border-radius:10px;padding:14px}
+.grid-2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+@media(max-width:850px){.grid-2{grid-template-columns:1fr}}
+ul.clean{margin:0;padding-left:18px}
+.footer{border-top:1px solid var(--line);margin-top:30px;padding:14px 0;text-align:center;color:var(--muted);font-size:14px}
+[dir="rtl"] .hero{grid-template-columns:1fr minmax(90px,120px)}
+[dir="rtl"] .nav-links{flex-direction:row-reverse}
+</style></head><body>
+<div class="nav"><div class="container nav-inner">
+  <div class="brand" data-i="title">Dr. Mohsen Akhondi, MBA</div>
+  <nav class="nav-links">
+    <a href="#about" data-i="nav_about">Über mich</a>
+    <a href="#resume" data-i="nav_resume">Lebenslauf</a>
+    <a href="#certs" data-i="nav_certs">Zertifikate</a>
+    <a href="publications.html" data-i="nav_pubs">Publikationen</a>
+    <a href="#contact" data-i="nav_contact">Kontakt</a>
+  </nav>
+  <div class="lang-switch"><button data-lang="fa">FA</button><button data-lang="de" class="active">DE</button><button data-lang="en">EN</button></div>
+</div></div>
+<main class="container">
+<section class="hero"><img src="assets/photo.jpg" alt="Portrait"><div><h1 data-i="title">Dr. Mohsen Akhondi, MBA</h1>
+<div class="sub" data-i="role">Facharzt für Anästhesiologie • Fellowship für Kinderanästhesie • Intensivmedizin</div></div></section>
+<section id="about" class="section"><h2 data-i="about_h">Über mich</h2><div class="card"><p data-i="about_text">…</p></div></section>
+<section id="resume" class="section"><h2 data-i="resume_h">Lebenslauf</h2>
+<div class="grid-2">
+  <div class="card"><h3 data-i="edu_h">Ausbildung</h3><ul id="edu-list" class="clean">
+    <li>MD — Mashhad University of Medical Sciences, Iran</li><li>Anesthesiology Specialty Training — Mashhad, Iran</li><li>Fellowship in Pediatric Anesthesia — Mashhad, Iran</li><li>MBA (Strategy) — University of Tehran</li>
+  </ul></div>
+  <div class="card"><h3 data-i="exp_h">Berufserfahrung</h3><ul id="exp-list" class="clean">
+    <li>Anesthesiologist — Sana Klinikum Hof (Germany)</li><li>Anesthesia — Kreiskrankenhaus Torgau (Germany)</li><li>Anesthesia — Heart Center Leipzig (Germany)</li><li>Head of Anesthesia — Sajadeh & Taleghani Hospitals (Iran)</li>
+  </ul></div>
+</div></section>
+<section id="certs" class="section"><h2 data-i="certs_h">Weiterbildungen & Zertifikate</h2>
+<div class="card"><ul id="certs-list" class="clean">
+  <li>Berliner Regionalanästhesie Intensivkurs (BRAIN)</li><li>Strahlenschutzkurs</li><li>Perioperative Schmerztherapie</li><li>Intensivmedizinische Komplexbehandlung</li><li>Sonographie & Echokardiographie in der Intensivmedizin</li><li>Deutsche Gesellschaft für Anästhesiologie und Intensivmedizin: AFS – Anästhesie Fokussierte Sonographie: Grundlagen und Gefäßsonographie</li>
+</ul></div></section>
+<section id="docs" class="section"><h2 data-i="docs_h">Offizielle Dokumente</h2>
+<div class="card"><ul id="docs-list" class="clean">
+  <li>Approbation (Deutschland)</li><li>Facharzt für Anästhesiologie (Deutschland)</li><li>Studium der Humanmedizin an der Universität für Medizin in Mashhad (Iran)</li><li>Anästhesiologie Facharzt, Schmerz- und Intensivmedizin an der Universität für Medizin in Mashhad (Iran)</li><li>Board‑Zertifizierung Anästhesiologie, ITS und Schmerztherapie (Iran)</li><li>Fellowship Kinderanästhesie (Iran)</li>
+</ul></div></section>
+<section id="contact" class="section"><h2 data-i="contact_h">Kontakt</h2><div class="card"><p><a href="mailto:Akhondi@Live.com" data-i="contact_btn">E‑Mail senden</a></p></div></section>
+<div class="footer">© <script>document.write(new Date().getFullYear())</script> Mohsen Akhondi</div>
+</main>
+<script>
+const i18n = {
+  de:{nav_about:'Über mich',nav_resume:'Lebenslauf',nav_certs:'Zertifikate',nav_pubs:'Publikationen',nav_contact:'Kontakt',
+      title:'Dr. Mohsen Akhondi, MBA',role:'Facharzt für Anästhesiologie • Fellowship für Kinderanästhesie • Intensivmedizin',
+      about_h:'Über mich',about_text:'Erfahrener Facharzt für Anästhesiologie mit Fellowship in Kinderanästhesie, Schwerpunkt Intensivmedizin und perioperative Schmerztherapie.',
+      resume_h:'Lebenslauf',edu_h:'Ausbildung',exp_h:'Berufserfahrung',certs_h:'Weiterbildungen & Zertifikate',docs_h:'Offizielle Dokumente',
+      contact_h:'Kontakt',contact_btn:'E‑Mail senden',
+      edu_list:['MD — Mashhad University of Medical Sciences, Iran','Anesthesiology Specialty Training — Mashhad, Iran','Fellowship in Pediatric Anesthesia — Mashhad, Iran','MBA (Strategy) — University of Tehran'],
+      exp_list:['Anesthesiologist — Sana Klinikum Hof (Germany)','Anesthesia — Kreiskrankenhaus Torgau (Germany)','Anesthesia — Heart Center Leipzig (Germany)','Head of Anesthesia — Sajadeh & Taleghani Hospitals (Iran)'],
+      certs_list:['Berliner Regionalanästhesie Intensivkurs (BRAIN)','Strahlenschutzkurs','Perioperative Schmerztherapie','Intensivmedizinische Komplexbehandlung','Sonographie & Echokardiographie in der Intensivmedizin','Deutsche Gesellschaft für Anästhesiologie und Intensivmedizin: AFS – Anästhesie Fokussierte Sonographie: Grundlagen und Gefäßsonographie'],
+      docs_list:['Approbation (Deutschland)','Facharzt für Anästhesiologie (Deutschland)','Studium der Humanmedizin an der Universität für Medizin in Mashhad (Iran)','Anästhesiologie Facharzt, Schmerz- und Intensivmedizin an der Universität für Medizin in Mashhad (Iran)','Board‑Zertifizierung Anästhesiologie, ITS und Schmerztherapie (Iran)','Fellowship Kinderanästhesie (Iran)']
+  },
+  en:{nav_about:'About',nav_resume:'Resume',nav_certs:'Certificates',nav_pubs:'Publications',nav_contact:'Contact',
+      title:'Dr. Mohsen Akhondi, MBA',role:'Specialist in Anesthesiology • Fellowship in Pediatric Anesthesia • Intensive Care',
+      about_h:'About',about_text:'Experienced anesthesiologist with a Fellowship in Pediatric Anesthesia, focusing on intensive care and perioperative pain management.',
+      resume_h:'Resume',edu_h:'Education',exp_h:'Experience',certs_h:'Certificates',docs_h:'Official Documents',
+      contact_h:'Contact',contact_btn:'Email me',
+      edu_list:['MD — Mashhad University of Medical Sciences, Iran','Anesthesiology Specialty Training — Mashhad, Iran','Fellowship in Pediatric Anesthesia — Mashhad, Iran','MBA (Strategy) — University of Tehran'],
+      exp_list:['Anesthesiologist — Sana Klinikum Hof (Germany)','Anesthesia — Kreiskrankenhaus Torgau (Germany)','Anesthesia — Heart Center Leipzig (Germany)','Head of Anesthesia — Sajadeh & Taleghani Hospitals (Iran)'],
+      certs_list:['Berlin Regional Anesthesia Intensive Course (BRAIN)','Radiation Protection Course','Perioperative Pain Therapy','Complex Intensive Care Treatment','Ultrasound & Echocardiography in Intensive Care','German Society of Anesthesiology & Intensive Care: AFS – Anesthesia‑Focused Ultrasound (Basics & Vascular)'],
+      docs_list:['Approbation (Germany) — Medical License','Specialist Certificate in Anesthesiology (Germany)','MD — Medical Degree, Mashhad University of Medical Sciences (Iran)','Specialist training in Anesthesiology, Pain & Intensive Care — Mashhad University of Medical Sciences (Iran)','Board certification in Anesthesiology, ICU & Pain Therapy (Iran)','Fellowship in Pediatric Anesthesia (Iran)']
+  },
+  fa:{nav_about:'درباره من',nav_resume:'رزومه',nav_certs:'گواهی‌ها',nav_pubs:'مقالات',nav_contact:'تماس',
+      title:'دکتر محسن آخوندی، MBA',role:'متخصص بیهوشی • فلوشیپ فوق‌تخصصی بیهوشی کودکان • مراقبت‌های ویژه',
+      about_h:'درباره من',about_text:'پزشک متخصص بیهوشی و دارندهٔ فلوشیپ فوق‌تخصصی بیهوشی کودکان، با تمرکز بر مراقبت‌های ویژه و مدیریت درد پیرامون عمل.',
+      resume_h:'رزومه',edu_h:'تحصیلات',exp_h:'سوابق شغلی',certs_h:'دوره‌ها و گواهی‌نامه‌ها',docs_h:'اسناد رسمی',
+      contact_h:'تماس',contact_btn:'ارسال ایمیل',
+      edu_list:['دکترای حرفه‌ای پزشکی (MD) — دانشگاه علوم پزشکی مشهد، ایران','دوره تخصص بیهوشی — مشهد، ایران','فلوشیپ بیهوشی کودکان — مشهد، ایران','MBA (استراتژی) — دانشگاه تهران'],
+      exp_list:['پزشک متخصص بیهوشی — Sana Klinikum Hof (آلمان)','بیهوشی — Kreiskrankenhaus Torgau (آلمان)','بیهوشی — Heart Center Leipzig (آلمان)','رئیس بخش بیهوشی — بیمارستان‌های سجادیه و طالقانی (ایران)'],
+      certs_list:['دوره فشرده رژیونال آنستزی برلین (BRAIN)','دوره حفاظت در برابر اشعه','درمان درد پیرامون عمل','درمان پیچیده مراقبت‌های ویژه','سونوگرافی و اکو در ICU','AFS – سونوگرافی متمرکز بر بیهوشی (مبانی و عروق)'],
+      docs_list:['اپروباسیون (مجوز کار پزشکی در آلمان)','عنوان تخصصی بیهوشی (آلمان)','دکترای پزشکی — دانشگاه علوم پزشکی مشهد (ایران)','تخصص بیهوشی، درد و مراقبت‌های ویژه — دانشگاه علوم پزشکی مشهد (ایران)','بورد تخصصی بیهوشی، ICU و درمان درد (ایران)','فلوشیپ بیهوشی کودکان (ایران)']
+  }
+};
+function fillList(id, arr){const ul=document.getElementById(id); if(!ul) return; ul.innerHTML=''; arr.forEach(x=>{const li=document.createElement('li'); li.textContent=x; ul.appendChild(li);});}
+function setLang(lang){
+  const l = i18n[lang]?lang:'de';
+  document.documentElement.lang=l;
+  document.documentElement.dir=(l==='fa')?'rtl':'ltr';
+  const t=i18n[l];
+  document.querySelectorAll('[data-i]').forEach(el=>{const k=el.getAttribute('data-i'); if(t[k]) el.textContent=t[k];});
+  fillList('edu-list',t.edu_list); fillList('exp-list',t.exp_list); fillList('certs-list',t.certs_list); fillList('docs-list',t.docs_list);
+  document.querySelectorAll('.lang-switch button').forEach(b=>b.classList.remove('active'));
+  const btn=document.querySelector(`.lang-switch button[data-lang="${l}"]`); if(btn) btn.classList.add('active');
+  localStorage.setItem('lang',l);
+}
+document.addEventListener('DOMContentLoaded',()=>{
+  const saved=localStorage.getItem('lang'); let initial=saved;
+  if(!initial){ const nav=(navigator.language||'en').toLowerCase(); if(nav.startsWith('fa')) initial='fa'; else if(nav.startsWith('de')) initial='de'; else initial='en'; }
+  setLang(initial);
+  document.querySelectorAll('.lang-switch button').forEach(b=>b.addEventListener('click',()=>setLang(b.dataset.lang)));
+});
+</script>
+</body></html>
